@@ -8,7 +8,7 @@ void loop() {
     float temp = voltage * 100.0 // mV sang C
     ​Serial.println(temp);
     if (celsius > 30){
-        digitalWrite(13,HIGH);
+        digitalWrite(13, HIGH);
     } else {
         digitalWrite(13, LOW);
     }
