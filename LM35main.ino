@@ -3,10 +3,10 @@ void setup() {
     Serial.begin(9600);
 }
 void loop() {
-    ​int read = analogRead(sensorPin);
+    int read = analogRead(sensorPin);
     float voltage = reading * 5.0 / 1024.0;
     float temp = voltage * 100.0 // mV sang C
-    ​Serial.println(temp);
+    Serial.println(temp);
     if (celsius > 30){
         digitalWrite(13, HIGH);
     } else {
