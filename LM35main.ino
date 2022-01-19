@@ -1,7 +1,7 @@
 int sensorPin = A0;
 void setup() {
-    Serial.begin(9600);
-    pinMode(7, OUTPUT);
+    Serial.begin(9600); //Khởi động kết nối serial ở 9600 baud
+    pinMode(7, OUTPUT); //Đặt pinMode là output
 }
 void loop() {
     int read = analogRead(sensorPin);
@@ -13,5 +13,10 @@ void loop() {
     } else {
         digitalWrite(7, LOW);
     }
-    delay(2000);
+    /* 
+        Kiểm tra nhiệt độ:
+        Nếu nhiệt độ < 50 độ C thì bật relay, điều khiển cho quạt vả bugi bật
+        Còn nếu không đặt relay là tắt
+    */
+    delay(2000); //Set thời gian kiểm tra là 2s 1 lần
 }
